@@ -14,7 +14,7 @@ public class BookingEndpoints {
                 .post("/booking");
     }
 
-    public Response getBooking(int bookingId) {
+    public static Response getBooking(int bookingId) {
         return given()
                 .get("/booking/" + bookingId);
     }
@@ -27,7 +27,7 @@ public class BookingEndpoints {
                 .put("/booking/" + bookingId);
     }
 
-    public Response deleteBooking(int bookingId) {
+    public static Response deleteBooking(int bookingId) {
         return given()
                 .cookie("token", TokenUtil.getToken())
                 .delete("/booking/" + bookingId);
