@@ -7,7 +7,7 @@ import api.utils.TokenUtil;
 import static io.restassured.RestAssured.given;
 
 public class BookingEndpoints {
-    public Response createBooking(Booking booking) {
+    public static Response createBooking(Booking booking) {
         return given()
                 .contentType(ContentType.JSON)
                 .body(booking)
@@ -19,7 +19,7 @@ public class BookingEndpoints {
                 .get("/booking/" + bookingId);
     }
 
-    public Response updateBooking(int bookingId, Booking updatedBooking) {
+    public static Response updateBooking(int bookingId, Booking updatedBooking) {
         return given()
                 .contentType(ContentType.JSON)
                 .cookie("token", TokenUtil.getToken())
