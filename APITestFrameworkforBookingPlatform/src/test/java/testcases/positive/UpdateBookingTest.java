@@ -1,9 +1,9 @@
-package testcases;
+package testcases.positive;
 
 import api.utils.TokenUtil;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.Test;
 import org.testng.Assert;
+import org.junit.jupiter.api.Test;
 import pages.Basetest;
 import pages.Booking;
 import pages.BookingDates;

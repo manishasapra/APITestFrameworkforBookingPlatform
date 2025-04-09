@@ -1,4 +1,4 @@
-package testcases;
+package testcases.positive;
 
 import api.utils.TokenUtil;
 import io.restassured.response.Response;

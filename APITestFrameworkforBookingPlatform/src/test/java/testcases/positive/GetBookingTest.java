@@ -1,4 +1,4 @@
-package testcases;
+package testcases.positive;
 import lombok.*;
 import org.junit.jupiter.api.Test;
 import pages.Basetest;

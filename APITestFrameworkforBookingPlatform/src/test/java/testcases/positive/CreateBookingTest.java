@@ -1,4 +1,4 @@
-package testcases;
+package testcases.positive;
 import org.junit.jupiter.api.Test;
 import pages.Basetest;
 import pages.Booking;
