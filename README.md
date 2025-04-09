@@ -21,7 +21,7 @@ It covers a range of HTTP methods, including GET, POST, PUT, and DELETE, using t
 - ✅ Provides a token-based authentication mechanism for secure requests
 - ✅ Can be run locally via IntelliJ IDEA or from the command line using Maven
 
-## 🚀 API endpoints
+## API endpoints
 -This framework automates the following API operations for Restful Booker:
 - **Create Booking** - POST /booking
 - **Get Booking** - GET /booking/{id}
