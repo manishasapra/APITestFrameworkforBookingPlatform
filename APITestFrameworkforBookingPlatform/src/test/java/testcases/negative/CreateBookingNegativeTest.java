@@ -11,12 +11,23 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class CreateBookingNegativeTest extends Basetest {
     @Test
-    public void testCreateBookingWithMissingFields() {
-        BookingDates dates = new BookingDates("2023-09-01", "2023-09-10");
-        Booking booking = new Booking(null, null, 100, true, dates, "Lunch");
+    public void testCreateBookingWithMissingOrInvalidFields() {
+        // Build invalid BookingDates (missing checkout)
+        BookingDates dates = new BookingDates("2025-04-10", null);
 
+        // Build invalid Booking (empty lastname, 0 price, null additionalneeds)
+        Booking booking = new Booking("John", "", 0, true, dates, null);
+
+        // Make the API call
         Response response = BookingEndpoints.createBooking(booking);
 
-        assertEquals(response.getStatusCode(), 500); // or 400 depending on API
+        // Print and validate response
+        int statusCode = response.getStatusCode();
+        System.out.println("Status Code: " + statusCode);
+        response.prettyPrint();
+
+        // Assert based on actual API behavior
+        assertEquals(statusCode, 500); // or 500 depending on the real API
     }
+
 }
