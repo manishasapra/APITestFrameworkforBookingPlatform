@@ -32,6 +32,19 @@ public class BookingEndpoints {
                 .cookie("token", TokenUtil.getToken())
                 .delete("/booking/" + bookingId);
     }
+    // Delete without token
+    public static Response deleteBookingWithoutToken(int bookingId) {
+        return given()
+                .when()
+                .delete("/booking/" + bookingId);
+    }
+    // Delete with invalid ID (string instead of int)
+    public static Response deleteBookingWithStringId(String id, String token) {
+        return given()
+                .cookie("token", token)
+                .when()
+                .delete("/booking/" + id);
+    }
 }
 
 
