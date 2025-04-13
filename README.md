@@ -11,12 +11,14 @@ It covers a range of HTTP methods, including GET, POST, PUT, and DELETE, using t
 - **Maven** - Dependency management
 - **POJO (Plain Old Java Object)** - Data modeling for requests and responses
 - **Page Object Model (POM)** - Design pattern for organizing tests
+- **Extent Reports** – For detailed and interactive test reporting
 
 ## Features
 - ✅ Automates API tests for Restful Booker API
 - ✅ Supports GET, POST, PUT, and DELETE requests
 - ✅ Uses POJO classes for request and response data handling
 - ✅ Uses Rest Assured for API testing and validation
+- ✅ Includes Extent Reports for visually rich and customizable test execution reports
 - ✅ Implements Page Object Model (POM) for better test maintainability
 - ✅ Provides a token-based authentication mechanism for secure requests
 - ✅ Can be run locally via IntelliJ IDEA or from the command line using Maven
